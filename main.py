@@ -19,20 +19,20 @@ def respond_to_ship(message):
     # اگر اولین بار است یا بیشتر از 15 ثانیه از آخرین "شیپ" گذشته باشد
     if last_ship_time is None or current_time - last_ship_time > 15:
         ship_count = 1
-        bot.reply_to(message, 'هوی')
+        bot.reply_to(message, 'هیس')
     # اگر در کمتر از 15 ثانیه "شیپ" دوم گفته شود
     elif ship_count == 1:
         ship_count = 2
-        bot.reply_to(message, 'هوی با توام')
+        bot.reply_to(message, 'باز گفت. آدم باش!')
     # اگر باز هم در کمتر از 15 ثانیه "شیپ" سوم گفته شود
     elif ship_count == 2:
-        bot.reply_to(message, 'خفه شو شیپ نداریم')
+        bot.reply_to(message, 'نگو داری حالمو بد میکنی')
         ship_count = 3
     elif ship_count == 3:
-        bot.reply_to(message, 'کوتاه نمیای نه ؟')
+        bot.reply_to(message, 'حالم بهم خورد عوضی')
         ship_count = 4
     elif ship_count == 4:
-        bot.reply_to(message, 'دیگه فحش میدم تکرار کنی')
+        bot.reply_to(message, 'چقد حال بهم زن شدی!!!')
         ship_count = 1
 
     # به‌روزرسانی زمان آخرین "شیپ"
